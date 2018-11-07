@@ -1,0 +1,6 @@
+.env
+*.env
+.terraform
+*.tfstate*
+*.ai
+*.log
