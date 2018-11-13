@@ -46,13 +46,13 @@ Once you have acquired your Heroku authorization token, combine it with your her
 
 ```bash
 export \
-  HEROKU_EMAIL='your-heroku-email' \
-  HEROKU_API_KEY='you-heroku-auth-token' \
+  TF_VAR_HEROKU_EMAIL='your-heroku-email' \
+  TF_VAR_HEROKU_API_KEY='you-heroku-auth-token' \
   TF_VAR_heroku_enterprise_team='your-enterprise-team-name' \
   TF_VAR_aws_access_key='IAM user aws access key' \
   TF_VAR_aws_secret_key='IAM user aws secret key' \
-  TF_VAR_redshift_dbname='name of redshift db you would like to create' \
-  TF_VAR_redshift_username='master redshift username you would like to create' \
+  TF_VAR_redshift_dbname='alphanumeric and underscores only' \
+  TF_VAR_redshift_username='alphanumeric redshift username you would like to create' \
   TF_VAR_redshift_password='master redshift user password' 
 ```
 
