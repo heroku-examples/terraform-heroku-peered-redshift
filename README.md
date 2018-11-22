@@ -56,6 +56,8 @@ export \
   TF_VAR_redshift_password='master redshift user password' 
 ```
 
+*Note: `TF_VAR_redshift_username` can only be alphanumeric. `TF_VAR_redshift_dbname` can only be alphanumeric, underscore, or dollar sign.*
+
 ## Usage
 
 ```bash
