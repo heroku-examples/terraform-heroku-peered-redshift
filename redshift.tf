@@ -40,7 +40,7 @@ resource "aws_redshift_cluster" "tf_redshift_cluster" {
   database_name       = "${var.redshift_dbname}"
   master_username     = "${var.redshift_username}"
   master_password     = "${var.redshift_password}"
-  node_type           = "dc1.large"
+  node_type           = "dc2.large"
   cluster_type        = "single-node"
   publicly_accessible = "false" 
   skip_final_snapshot = "true"
