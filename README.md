@@ -51,8 +51,8 @@ export \
   TF_VAR_heroku_enterprise_team='your-enterprise-team-name' \
   TF_VAR_aws_access_key='IAM user aws access key' \
   TF_VAR_aws_secret_key='IAM user aws secret key' \
-  TF_VAR_redshift_dbname='name of redshift db you would like to create' \
-  TF_VAR_redshift_username='master redshift username you would like to create' \
+  TF_VAR_redshift_dbname='alphanumeric and underscores only' \
+  TF_VAR_redshift_username='alphanumeric redshift username you would like to create' \
   TF_VAR_redshift_password='master redshift user password' 
 ```
 
