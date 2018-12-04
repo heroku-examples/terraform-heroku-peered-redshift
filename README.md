@@ -8,7 +8,7 @@ This example uses Terraform to create:
 
 The [redshift-client](https://github.com/trevorscott/redshift-client) Heroku app establishes a connection to Redshift when it starts and outputs success / failure in the Heroku logs.
 
-![Diagram of example private space app connecting to a Redshift Cluster in a peered AWS VPC](doc/terraform-heroku-peered-redshift.png)
+![Diagram of example private space app connecting to a Redshift Cluster in a peered AWS VPC](doc/figure1.png)
 
 ## Requirements
 
