@@ -10,6 +10,8 @@ The [redshift-client](https://github.com/trevorscott/redshift-client) Heroku app
 
 ![Diagram of example private space app connecting to a Redshift Cluster in a peered AWS VPC](doc/figure1.png)
 
+You can read about this architecture in the Heroku Dev Center article: [Peering Amazon Redshift with Heroku](https://devcenter.heroku.com/articles/peering-aws-rds-aws-redshift-with-heroku).
+
 ## Requirements
 
 1. A Heroku Enterprise Account
