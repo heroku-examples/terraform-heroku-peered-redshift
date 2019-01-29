@@ -20,6 +20,27 @@ You can read about this architecture in the Heroku Dev Center article: [Peering 
     With policies:
     * **AmazonVPCFullAccess**
     * **AmazonRedshiftFullAccess**
+    * And a policy [granting iam:CreateServiceLinkedRole](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#service-linked-role-permissions) such as:
+      ```
+      {
+          "Version": "2012-10-17",
+          "Statement": [
+              {
+                  "Effect": "Allow",
+                  "Action": "iam:CreateServiceLinkedRole",
+                  "Resource": "arn:aws:iam::*:role/aws-service-role/*"
+              },
+              {
+                  "Effect": "Allow",
+                  "Action": [
+                      "iam:AttachRolePolicy",
+                      "iam:PutRolePolicy"
+                  ],
+                  "Resource": "arn:aws:iam::*:role/aws-service-role/*"
+              }
+          ]
+      }
+      ```
 
 ## Config
 
@@ -66,7 +87,7 @@ export \
 terraform init
 ```
 
-Choose a deployment name. Keep it short as your resources will be prefixed by the chosen name.
+Choose a deployment name. Keep it short (under 14 characters) as your resources will be prefixed by the chosen name.
 ```
 terraform apply \
   -var name=<your-deployment-name> \
